@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />.
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+
+</head>
+<body>
+    <div class="flex items-center justify-center h-screen ">
+       
+             <div class="m-3">
+                <div class="m-2 text-center" >
+                    <label class="text-White font-bold  " >TO ADD NEW EMPLOYEE</label>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-outline btn-success w-full " id="add" >Add</button>
+                </div>
+             </div>
+             <div class="m-3 ">
+                <div class="m-2 text-center">
+                    <label class="text-White font-bold " >TO REMOVE AN EMPLOYEE</label>
+                </div>
+                <div class="text-center ">
+                    <button class="btn btn-outline btn-success w-full" id="remove" >Remove</button>
+                </div>
+             </div>
+             <div class="m-3">
+                <div class="m-2 text-center">
+                    <label class="text-White font-bold " >TO SEARCH AN EMPLOYEE</label>
+                </div>
+               <div class="text-center">
+                <button class="btn btn-outline btn-success w-full"  id="search">Search</button>
+               </div>
+             </div>
+        
+      </div>
+      
+    <script src="index.js"></script>
+</body>
+</html>

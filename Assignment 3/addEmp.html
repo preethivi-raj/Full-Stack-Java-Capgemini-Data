@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />.
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    <title>Add New Employee</title>
+</head>
+<body>
+
+    <div class="flex items-center justify-center h-screen text-white" > 
+        <form class="w-80" id="form">
+            <div class="text-center mb-2 " >
+                <h1 class="font-bold ">ADD NEW EMPLOYEE DETAILS</h1>
+            </div>
+            <label class="form-control w-full max-w-xs">
+                <div class="label">
+                  <span class="label-text text-white">Employee Name</span>
+                </div>
+                <input type="text" id="name" placeholder="JAMES KUMAR" class="input input-bordered w-full max-w-xs" />
+            </label>
+            <label class="form-control w-full max-w-xs">
+                <div class="label">
+                  <span class="label-text text-white">Employee Id</span>
+                </div>
+                <input type="text" id="id" placeholder="3500032" class="input input-bordered w-full max-w-xs" />
+            </label>
+            <label class="form-control w-full max-w-xs">
+                <div class="label">
+                  <span class="label-text text-white">Skills</span>
+                </div>
+                <input type="text" id="skills" placeholder="JAVA,JS..." class="input input-bordered w-full max-w-xs" />
+            </label>
+            <label class="form-control w-full max-w-xs">
+                <div class="label">
+                  <span class="label-text text-white">Date of Joining</span>
+                </div>
+                <input type="date" id="date" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+            </label>
+            <label class="form-control w-full max-w-xs">
+                <div class="label">
+                  <span class="label-text text-white">Department</span>
+                </div>
+                <input type="text" id="department" placeholder="DCX" class="input input-bordered w-full max-w-xs" />
+            </label>
+            <div class="mt-2">
+                <button class="btn btn-outline btn-success w-full " type="submit" id="button">Submit</button>
+            </div>
+          </form>
+
+    </div>
+
+    <script src="addEmp.js"></script>
+    
+</body>
+</html>

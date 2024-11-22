@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    .
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Remove Employee</title>
+  </head>
+  <body>
+    <div class="flex justify-center items-center ">
+      
+      <form class="w-96" id="form">
+        <div class="m-2 text-center" >
+          <div class="mb-4">
+            <label class="text-2xl font-bold">ENTER THE EMPLOYEE ID</label>
+          </div>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="EMPLOYEE"
+            class="input input-bordered input-accent w-full "
+          />
+        </div>
+        <div class="m-4">
+          <button type="submit" class="btn btn-outline btn-success w-full" >Search</button>
+        </div>
+      </form>
+    </div>
+    
+    <div class="lg:mt-20" id="result" >
+      <div class="flex justify-center items-center">
+        <div class="m-4 text-center">
+            <p id="emp_name" class="text-2xl font-extrabold" ></p>
+            <p id="emp_id" class="text-2xl font-bold" ></p>
+        </div>
+        <div class="m-4">
+          <button type="submit" class="btn btn-outline btn-accent" id="remove-btn">Remove</button>
+        </div>
+      </div>
+    </div>
+    <script src="removeEmp.js"></script>
+  </body>
+</html>

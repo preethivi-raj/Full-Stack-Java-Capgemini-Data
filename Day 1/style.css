@@ -1,0 +1,43 @@
+
+body{
+    margin: 0%;
+    font-size: larger;
+}
+
+header {
+    text-align: center;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+.index {
+   text-align: center;
+}
+
+.index li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    margin: 10px;
+}
+
+.java-variables li {
+    padding: 4px;
+}
+
+.table th , tr , td{
+    border: solid 2px ;
+    padding: 5px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color:black;
+    padding: 3px;
+    color: white;
+}
+
