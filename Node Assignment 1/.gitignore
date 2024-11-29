@@ -1,0 +1,6 @@
+<<<<<<< HEAD:Node js/.gitignore
+.node_modules
+=======
+.node_modules
+.env
+>>>>>>> bc55e24d68a34ab8d9ee5e8f6db9057156b01b88:Node Assignment 1/.gitignore
