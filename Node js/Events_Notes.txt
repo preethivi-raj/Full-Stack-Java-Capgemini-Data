@@ -1,0 +1,16 @@
+1.Trimer - i/o callback - Poll - check (executes setImmediate() callback) -> close
+Event
+EventEmitter
+Callbacks
+
+
+2.Real time use of Events
+Web server
+Real-Time Communication
+File System Operation
+Database
+
+3.Types of Event
+File System 
+Http
+Custim Event

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>submit a message to node js server</h1>
+    <form action="" id="form">
+        <label for="msg">Message</label>
+        <input type="text" id="msg" name="msg" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", async(e)=>{
+            e.preventDefault(); //prevent the reloading the page
+            var msg =document.getElementById("msg").value;
+            try {
+                const res = await fetch(`http://localhost:3000/` , {
+                method : "POST",
+                mode : "no-cors",
+                headers : {
+                    "Content-Type"  :"application/json"
+                },
+                body : JSON.stringify({msg : msg})
+            })
+            if(!res.ok){
+                return new Error("Something Went wrong")
+            }
+            } catch (error) {
+                console.log("Error : ",error)
+            }
+        })
+    </script>
+</body>
+</html>
