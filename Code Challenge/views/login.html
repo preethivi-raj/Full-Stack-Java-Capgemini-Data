@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>Login Page</h1>
+    <form id="loginForm">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required /><br /><br />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <button type="submit">Login</button>
+    </form>
+
+    <a href="signup.html">Sign Up</a>
+
+    <div id="message" style="margin: 10px"></div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault(); // Prevent the form from refreshing the page
+
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const message = document.getElementById("message");
+
+          try {
+            const response = await fetch(
+              "http://localhost:3000/api/auth/login",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email, password }),
+              }
+            );
+
+            const data = await response.json();
+            console.log(data);
+            if (localStorage.getItem("token")) {
+              localStorage.removeItem("token");
+              localStorage.setItem(
+                "token",
+                JSON.stringify({
+                  userRole: data.role,
+                })
+              );
+            } else {
+              localStorage.setItem(
+                "token",
+                JSON.stringify({
+                  userRole: data.role,
+                })
+              );
+            }
+            if (response.ok) {
+              message.textContent = data.message;
+            } else {
+              message.textContent = data.message;
+            }
+          } catch (error) {
+            message.textContent = "Error connecting to server";
+          }
+          // finally {
+
+          //   setTimeout(() => {
+          //     window.location.href = 'product.html';
+          //   }, 1000);
+          // }
+        });
+    </script>
+  </body>
+</html>

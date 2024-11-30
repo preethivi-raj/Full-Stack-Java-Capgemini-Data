@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Form</title>
+  </head>
+  <body>
+    <h1>Product Form</h1>
+    <form id="productForm">
+      <label for="name">Product Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price" step="0.01" required />
+
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="">-- Select Category --</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+        <option value="groceries">Groceries</option>
+        <option value="furniture">Furniture</option>
+      </select>
+
+      <label for="manufacturingDate">Manufacturing Date:</label>
+      <input
+        type="date"
+        id="manufacturingDate"
+        name="manufacturingDate"
+        required
+      />
+
+      <label for="expiryDate">Expiry Date:</label>
+      <input type="date" id="expiryDate" name="expiryDate" required />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="productList"></div>
+
+    <script src="register.js"></script>
+  </body>
+</html>
