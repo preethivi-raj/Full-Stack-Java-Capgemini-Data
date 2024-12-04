@@ -31,12 +31,6 @@ export const getLoanOffer  = async (req , res)=>{
 
         const maxEmi = 0.5 * monthly_sal;
 
-        if(maxEmi>emi){
-            return res.status(400).json({
-                message : "Your not eligible for this loan or please give less amount"
-            })
-        }
-
         const totalEmi = Math.floor(emi * no_of_month);
 
         res.status(200).json({
