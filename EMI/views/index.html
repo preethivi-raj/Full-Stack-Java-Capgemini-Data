@@ -1,0 +1,64 @@
+<!DOCTYPE html >
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" /> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="https://img.icons8.com/nolan/64/emi-payment.png" type="image/x-icon">
+    <title>Emi Calculator</title>
+</head>
+<body>
+    <div class="navbar bg-base-100">
+        <a class="btn btn-ghost text-xl">EMI CALCULATOR</a>
+      </div>
+
+       
+      
+      <form class="flex justify-center items-center"  id="form">
+        <div class="m-4">
+            <input
+               type="number"
+               id="monthly_salary"
+               placeholder="Monthly Salary"
+               class="input input-bordered input-success w-full max-w-xs" />
+          </div>
+        <div class="m-4" >
+            <input
+               type="number"
+               id="loan_amount"
+               placeholder="Loan Amount"
+               class="input input-bordered input-success w-full max-w-xs" />
+          </div>
+
+          <div class="m-4" >
+            <input
+                type="number"
+                placeholder="EMI Month"
+                id="emi_month"
+                class="input input-bordered input-success w-full max-w-xs" />
+          </div>
+
+        <select class="select select-success w-full max-w-xs m-4" id="select_tag">
+            <option disabled selected>Select type of loan</option>
+            <option>Personal</option>
+            <option>Car</option>
+            <option>Home</option>
+          </select>
+
+          <div>
+            <button class="btn btn-success" type="submit"  >Calculate</button>
+          </div>
+        </form>
+
+        <div id="answer"  class="flex justify-center items-center">
+
+        </div>
+
+        <div  id="error">
+
+        </div>
+      
+      <script src="index.js"></script>
+</body>
+</html>
