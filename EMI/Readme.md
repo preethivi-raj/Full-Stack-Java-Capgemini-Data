@@ -1,6 +1,6 @@
 # Full Stack Java Project
 
-You can view the project live here: [Full Stack Java Project](https://full-stack-java-capgemini-data-1.onrender.com/)
+You can view the project live here: [https://full-stack-java-capgemini-data-1.onrender.com/](https://full-stack-java-capgemini-data-1.onrender.com/)
 
 ## Setup Instructions
 
